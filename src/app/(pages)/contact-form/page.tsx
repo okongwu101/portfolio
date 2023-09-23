@@ -1,37 +1,23 @@
+
 'use client'
 
 import Joi from 'joi';
-import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches } from '@mantine/form';
+import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches, joiResolver, UseFormReturnType } from '@mantine/form';
 import emailjs from '@emailjs/browser';
-import { TextInput, Box, Button } from '@mantine/core';
-import { MyTextArea, MyTextInput } from '@/components/reUsables/formInputs';
+import { TextInput, Box, Button, Textarea } from '@mantine/core';
 import { SectionHeadingText } from '@/components/display/textsDisplays';
-
-
-
-const hello = "try new deployment"
-
-
-
-// const schema = Joi.object({
-//     name: Joi.string().min(3).message("Name shoud have at least 3 letters"),
-//     email: Joi.string()
-//         .email({ tlds: { allow: false } })
-//         .message('Invalid email'),
-//     subject: Joi.string().min(5)
-//         .message("Subject must have at least 5 characters"),
-//     message: Joi.string().min(10)
-//         .message("Subject must have at least 5 characters"),
-// })
+import { useEffect, useState } from 'react';
 
 
 type FormValues = {
-    // firstName: string
-    // lastName: string
-    // email: string
+    name: string;
+    subject: string;
+    email: string;
+    message: string;
 }
 
 export default function ContactForm() {
+
 
     const form = useForm({
         initialValues: {
@@ -50,46 +36,22 @@ export default function ContactForm() {
         },
     })
 
-    // const { handleSubmit, control } = useForm({
-    //     defaultValues: {
-    //         username: "",
-    //         email: "",
-    //         subject: "",
-    //         message: ""
-    //     }
-    // })
 
 
-
-
-
-
-
-
-
-
-    // const templateParams = {
-    //     name: 'James',
-    //     notes: 'Check this out!'
-    // };
-
-    // const templateParams = {
-    //     sender_name: 'James',
-    //     sender_email: 'Check this out!',
-    //     message: "",
-    //     subject: ""
-    // };
-
-    // const onSubmit = async (data: FormValues) => {
-        // emailjs.send(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, templateParams, `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`)
-        //     .then((response) => {
-        //         console.log('SUCCESS!', response.status, response.text);
-        //     }, (err) => {
-        //         console.log('FAILED...', err);
-        //     });
-
-    //     console.log('these are values', data)
-    // }
+    const onSubmit = async (data: FormValues) => {
+        emailjs.send(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, {
+            sender_name: data.name,
+            sender_email: data.email,
+            message: data.message,
+            subject: data.subject
+        }, `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                form.reset()
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
+    }
 
     return (
         <div className="lg:container mx-auto lg:px-52">
@@ -98,64 +60,74 @@ export default function ContactForm() {
                 <SectionHeadingText text="Contact Me" />
             </div>
 
+
+
             <div className='mx-4'>
-                <Box component='form' onSubmit={form.onSubmit(() => { })}
-                    className='flex flex-col gap-8'
+                <form noValidate onSubmit={
+                    form.onSubmit((values) => {
+                        // console.log('this is values', values.email)
+                        onSubmit(values)
+                    })}
+                    className='flex flex-col'
                 >
 
-
-                    {/* <MyTextInput
-                        label="Name"
-                        {...form.getInputProps('name')}
-                    /> */}
-
                     <TextInput
-                        label="Your job"
-                        placeholder="Your job"
+                        label="Name"
                         withAsterisk
                         mt="md"
                         {...form.getInputProps('name')}
+                    />
 
-                        />
-
-
-
-                    <MyTextInput
+                    <TextInput
                         label="Email"
+                        withAsterisk
+                        mt="md"
                         {...form.getInputProps('email')}
                     />
 
-
-
-                    <MyTextInput
+                    <TextInput
                         label="Subject"
+                        withAsterisk
+                        mt="md"
                         {...form.getInputProps('subject')}
-
-
                     />
 
-
-
-                    <MyTextArea
+                    <Textarea
                         label="Message"
+                        withAsterisk
+                        mt="md"
                         {...form.getInputProps('message')}
-
-
                     />
 
+                    <div className='flex flex-row gap-4 mt-6'>
+                        <Button
+                            fullWidth
+                            className='bg-zinc-800'
+                            type='reset'
+                            onClick={() => {
+                                form.reset()
 
-                    <Button
-                        fullWidth
-                        className='bg-zinc-800'
-                        type='submit'
-                    >
-                        Send message
-                    </Button>
+                            }}
+                        >
+                            Reset
+                        </Button>
+
+                        <Button
+                            fullWidth
+                            className='bg-zinc-800'
+                            type='submit'
+                        >
+                            Send message
+                        </Button>
+
+                    </div>
 
 
 
 
-                </Box>
+
+
+                </form>
             </div>
 
 
