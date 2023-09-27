@@ -1,14 +1,14 @@
 'use client'
 
+import { SectionHeadingText } from "@/components/display/textsDisplays"
 import { educationData, educationDataType } from "@/lib/dataSources/educationData"
-import { SectionHeadingText } from "../display/textsDisplays"
-import { Button, Card, Modal } from "@mantine/core"
+import { Card, Button, Modal } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 
-// my - 8 mt - 16 md: mt - 24 lg: mt - 32
 
-export default function EducationSection() {
+export default function Education() {
+
 
     // hook used to control the opening and closing of modal
     const [opened, { open, close }] = useDisclosure(false);
@@ -17,9 +17,8 @@ export default function EducationSection() {
     const [transcriptContent, setTranscriptContent] = useState<string[]>([])
     const [transcriptTitle, setTranscriptTitle] = useState("")
 
-
-    return (
-        <div className="">
+    return(
+        <div className="lg:container mx-auto lg:px-52">
             <SectionHeadingText text="Education" />
             <div className="grid md:grid-cols-4 gap-x-8 gap-y-8 my-16">
                 {
@@ -45,23 +44,23 @@ export default function EducationSection() {
                                         </div>
                                     </div>
 
-                                    
-                                        <Button
-                                            className="bg-zinc-800 font-sans text-base tracking-wider rounded-md"
-                                            onClick={() => {
-                                                setTranscriptContent(e.transcript)
-                                                setTranscriptTitle(e.transcriptTitle)
-                                                open()
-                                            }}
-                                        >
-                                            Transcript
-                                        </Button>
-                                        
-                                  
+
+                                    <Button
+                                        className="bg-zinc-800 font-sans text-base tracking-wider rounded-md"
+                                        onClick={() => {
+                                            setTranscriptContent(e.transcript)
+                                            setTranscriptTitle(e.transcriptTitle)
+                                            open()
+                                        }}
+                                    >
+                                        Transcript
+                                    </Button>
+
+
 
                                 </div>
-                                
-                               
+
+
 
                             </Card>
 
@@ -98,8 +97,8 @@ export default function EducationSection() {
                                         </ul>
                                     </div>
 
-                                   
-                                  
+
+
 
                                 </div>
                             </Modal>

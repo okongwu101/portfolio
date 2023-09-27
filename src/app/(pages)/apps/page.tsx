@@ -1,22 +1,12 @@
-'use client'
+import { symcheckDescription, moibrellaDescription } from "@/components/display/appDescriptions";
+import AppsDisplay from "@/components/display/appsDisplay";
+import { SectionHeadingText } from "@/components/display/textsDisplays";
+import { moibrellaTechData } from "@/lib/dataSources/moibrellaData";
+import { symcheckTechData } from "@/lib/dataSources/symcheckData";
 
-
-import { ContentText, SectionHeadingText } from "../display/textsDisplays"
-import { useViewportSize } from "@mantine/hooks"
-import AppsDisplay from "../display/appsDisplay"
-import { symcheckTechData } from "@/lib/dataSources/symcheckData"
-import { moibrellaDescription, symcheckDescription } from "../display/appDescriptions"
-import { moibrellaTechData } from "@/lib/dataSources/moibrellaData"
-
-
-
-export default function AppSection() {
-
-
-    
-    return (
-        <div>
-
+export default function Apps() {
+    return(
+        <div className="lg:container mx-auto lg:px-52">
             <SectionHeadingText text="Apps" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -39,8 +29,8 @@ export default function AppSection() {
                     modalTitle="Moibrella"
                     techData={moibrellaTechData}
                 />
-           
-                
+
+
 
             </div>
 

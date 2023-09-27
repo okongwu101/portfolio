@@ -6,7 +6,8 @@ import NavLink from "../display/navLink"
 import Image from "next/image"
 import avatar2 from "../../../public/avatar2.png"
 import { IconX } from '@tabler/icons-react';
-import { Card, Divider } from "@mantine/core"
+import { Button, Card, Divider } from "@mantine/core"
+import Link from "next/link"
 
 
 const gap = "Let's bridge the Gap !"
@@ -44,12 +45,23 @@ export default function SideNav() {
             </div>
 
             <div className="flex flex-col justify-start gap-4 mt-24">
-                <NavLink href="#home" text="home" />
-                <NavLink href="#about-me" text="about-me" />
-                <NavLink href="#skills" text="skills" />
-                <NavLink href="#apps" text="apps" />
-                <NavLink href="#education" text="education" />
-                <NavLink href="#first-section" text="blog" />
+                <NavLink href="/" text="home" />
+                <NavLink href="/about-me" text="about-me" />
+                <NavLink href="/skills" text="skills" />
+                <NavLink href="/apps" text="apps" />
+                <NavLink href="/education" text="education" />
+                <NavLink href="/blog" text="blog" />
+                <Link
+                    href="/contact-form"
+                >
+                    <Button variant="filled"
+                        className="bg-teal-900 my-6"
+                        size="md"
+                    >
+                        Contact Me
+                    </Button>
+
+                </Link>
 
 
 

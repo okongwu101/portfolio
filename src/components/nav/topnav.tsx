@@ -31,12 +31,12 @@ export default function TopNav() {
                 <div className="flex-row justify-evenly gap-12 items-center hidden lg:flex ">
 
 
-                    <NavLink href="#home" text="home" />
-                    <NavLink href="#about-me" text="about-me" />
-                    <NavLink href="#skills" text="skills" />
-                    <NavLink href="#apps" text="apps" />
-                    <NavLink href="#education" text="education" />
-                    <NavLink href="" text="blog" />
+                    <NavLink href="/" text="home" />
+                    <NavLink href="/about-me" text="about-me" />
+                    <NavLink href="/skills" text="skills" />
+                    <NavLink href="/apps" text="apps" />
+                    <NavLink href="/education" text="education" />
+                    <NavLink href="/blog" text="blog" />
                     <Link
                         href="/contact-form"
                     >

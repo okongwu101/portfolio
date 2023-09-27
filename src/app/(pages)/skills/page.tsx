@@ -1,15 +1,12 @@
+import { LargeCardNoHover } from "@/components/display/cards";
+import MedicalSkillsDisplay from "@/components/display/medSkillsDisplay";
+import SoftSkillsDisplay from "@/components/display/softSkillsDisplay";
+import TechSkillsDisplay from "@/components/display/techSkillsDisplay";
+import { SectionHeadingText } from "@/components/display/textsDisplays";
 
-
-import { LargeCardNoHover } from "../display/cards"
-import TechSkillsDisplay from "../display/techSkillsDisplay"
-import { SectionHeadingText } from "../display/textsDisplays"
-import MedicalSkillsDisplay from "../display/medSkillsDisplay"
-import SoftSkillsDisplay from "../display/softSkillsDisplay"
-
-
-export default function SkillSection() {
-    return (
-        <div>
+export default function Skills() {
+    return(
+        <div className="lg:container mx-auto lg:px-52">
             <SectionHeadingText text="Skills" />
             <div>
                 <LargeCardNoHover>
