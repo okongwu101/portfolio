@@ -8,6 +8,7 @@ import styles from '../styles/styles.module.css'
 import Providers from '@/lib/providers'
 import TopNav from '@/components/nav/topnav'
 import GoUp from '@/components/display/goUp'
+import Footer from '@/components/nav/footer'
 
 
 
@@ -44,6 +45,7 @@ export default function RootLayout({
           <TopNav />
           {children}
           <GoUp />
+          <Footer />
         </Providers>
 
       </body>
