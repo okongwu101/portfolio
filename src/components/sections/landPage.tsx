@@ -46,7 +46,7 @@ export default function LandingPage() {
                         <span className="hidden md:flex">|</span>
                         <div className="flex flex-row gap-2">
                             <span className="md:hidden"><IconTopologyStar2 size={16} /></span>
-                            <span>Full stack web developer</span>
+                            <span>Full stack web developers</span>
                         </div>
 
 
