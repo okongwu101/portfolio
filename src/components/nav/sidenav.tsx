@@ -8,6 +8,7 @@ import avatar2 from "../../../public/avatar2.png"
 import { IconX } from '@tabler/icons-react';
 import { Button, Card, Divider } from "@mantine/core"
 import Link from "next/link"
+import React from "react";
 
 
 const gap = "Let's bridge the Gap !"

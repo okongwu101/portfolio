@@ -1,14 +1,14 @@
 'use client'
 
-import { Avatar, Button, Burger, Drawer } from "@mantine/core"
-import NavLink from "../display/navLink"
-import avatar2 from '../../../public/avatar2.png'
+import { Burger, Button, Drawer } from "@mantine/core"
+import { useDisclosure } from '@mantine/hooks'
 import Image from 'next/image'
 import Link from "next/link"
-import { useDisclosure } from '@mantine/hooks';
+import avatar2 from '../../../public/avatar2.png'
 import styles from '../../styles/styles.module.css'
+import NavLink from "../display/navLink"
 import SideNav from "./sidenav"
-
+import React from "react";
 
 
 

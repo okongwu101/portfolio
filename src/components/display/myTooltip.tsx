@@ -2,6 +2,7 @@
 
 import { Tooltip } from "@mantine/core";
 import { ReactNode } from 'react';
+import React from "react";
 
 type myTooltipProps = {
     label: string;

@@ -2,6 +2,7 @@
 
 
 import { Divider } from '@mantine/core';
+import React from "react";
 
 export default function SectionDivider() {
     return(

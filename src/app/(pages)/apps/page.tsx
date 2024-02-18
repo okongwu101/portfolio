@@ -31,6 +31,16 @@ export default function Apps() {
                 />
 
 
+                <AppsDisplay
+                    appName="Clifast"
+                    demoLink="https://clifast.com"
+                    gitLink=""
+                    description={moibrellaDescription}
+                    modalTitle="Moibrella"
+                    techData={moibrellaTechData}
+                />
+
+
 
             </div>
 

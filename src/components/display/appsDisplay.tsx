@@ -1,13 +1,11 @@
 'use client'
 
-import { ReactNode, useState } from "react"
-import { SmallCard } from "./cards"
-import { IconBrandGithub } from "@tabler/icons-react";
-import { Card, Button, Modal } from "@mantine/core";
+import { Button, Card, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { ContentText } from "./textsDisplays";
-import styles from '../../styles/styles.module.css'
+import { IconBrandGithub } from "@tabler/icons-react";
+import { ReactNode, useState } from "react";
 import MyTooltip from "./myTooltip";
+import React from "react";
 
 
 type appSectionCardProps = {

@@ -3,6 +3,7 @@ import SectionDivider from '@/components/display/sectionDivider'
 
 
 import LandingPage from '@/components/sections/landPage'
+import React from "react";
 
 
 

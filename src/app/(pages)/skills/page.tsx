@@ -3,6 +3,7 @@ import MedicalSkillsDisplay from "@/components/display/medSkillsDisplay";
 import SoftSkillsDisplay from "@/components/display/softSkillsDisplay";
 import TechSkillsDisplay from "@/components/display/techSkillsDisplay";
 import { SectionHeadingText } from "@/components/display/textsDisplays";
+import React from "react";
 
 export default function Skills() {
     return(

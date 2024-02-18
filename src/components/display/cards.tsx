@@ -1,9 +1,8 @@
 'use client'
 
-import { Card } from "@mantine/core"
-import Link from "next/link";
-import { MouseEventHandler, ReactNode } from "react";
-import { redirect } from 'next/navigation'
+import { Card } from "@mantine/core";
+import { ReactNode } from "react";
+import React from "react";
 
 type MyCardProps = {
     children: ReactNode;

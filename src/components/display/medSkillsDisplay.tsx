@@ -1,6 +1,7 @@
 
 
 import { MedSkillDataTypes, MedicalSkillsData } from "@/lib/dataSources/medSkillsData"
+import React from "react"
 
 
 

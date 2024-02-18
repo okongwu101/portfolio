@@ -1,12 +1,11 @@
 
 'use client'
 
-import Joi from 'joi';
-import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches, joiResolver, UseFormReturnType } from '@mantine/form';
-import emailjs from '@emailjs/browser';
-import { TextInput, Box, Button, Textarea } from '@mantine/core';
 import { SectionHeadingText } from '@/components/display/textsDisplays';
-import { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { Button, TextInput, Textarea } from '@mantine/core';
+import { hasLength, isEmail, useForm } from '@mantine/form';
+import React from "react";
 
 
 type FormValues = {

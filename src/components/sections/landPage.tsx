@@ -1,11 +1,10 @@
 'use client'
 
-import Image from "next/image"
-import avatar1 from "../../../public/avatar1.png"
-import { Card } from "@mantine/core"
-import { IconBrandLinkedin, IconBrandGithub, IconBrandX, IconTopologyStar2 } from '@tabler/icons-react';
-import { useRouter } from 'next/navigation'
+import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconTopologyStar2 } from '@tabler/icons-react';
+import Image from "next/image";
+import avatar1 from "../../../public/avatar1.png";
 import { SmallCard } from "../display/cards";
+import React from "react";
 
 
 
@@ -16,7 +15,7 @@ const greeting = "Hi, I'm"
 
 
 export default function LandingPage() {
-    const router = useRouter()
+  
     return (
         <div>
             <div className="grid md:grid-cols-2 gap-8">

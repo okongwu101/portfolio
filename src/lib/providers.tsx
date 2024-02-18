@@ -6,6 +6,7 @@ import { Notifications } from '@mantine/notifications';
 import '@mantine/core/styles.css';
 import 'tailwindcss/tailwind.css'
 import '@mantine/notifications/styles.css';
+import React from "react";
 
 export default function Providers({ children }: { children: ReactNode }) {
     return (

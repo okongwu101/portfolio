@@ -2,6 +2,7 @@
 
 import { TechSkillDataTypes, skillsData } from "@/lib/dataSources/techSkillsData";
 import { useViewportSize } from "@mantine/hooks";
+import React from "react";
 
 /*
     Create a reusable component to display technical skills
@@ -20,7 +21,7 @@ export default function TechSkillsDisplay() {
         At same time maintain column display for devices with viewport less 
         400px. E.g. portrait view of most handheld phones.
     */
-    const { height, width } = useViewportSize()
+    const { width } = useViewportSize()
 
     return (
         <div className="flex flex-col gap-6">

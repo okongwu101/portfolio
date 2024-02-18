@@ -5,6 +5,7 @@ import { educationData, educationDataType } from "@/lib/dataSources/educationDat
 import { Card, Button, Modal } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
+import React from "react";
 
 
 export default function Education() {

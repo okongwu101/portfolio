@@ -1,4 +1,5 @@
 import { SoftSkillDataTypes, softSkillsData } from "@/lib/dataSources/softSkillsData";
+import React from "react";
 
 export default function SoftSkillsDisplay() {
     return (

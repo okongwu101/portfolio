@@ -4,9 +4,10 @@ import { Card } from '@mantine/core';
 import { IconArrowBigUpLine } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useViewportSize } from '@mantine/hooks';
+import React from 'react';
 
 export default function GoUp() {
-    const { height, width } = useViewportSize()
+    const { width } = useViewportSize()
 
    
     return (
