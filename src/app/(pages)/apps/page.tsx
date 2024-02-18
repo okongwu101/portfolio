@@ -3,6 +3,7 @@ import AppsDisplay from "@/components/display/appsDisplay";
 import { SectionHeadingText } from "@/components/display/textsDisplays";
 import { moibrellaTechData } from "@/lib/dataSources/moibrellaData";
 import { symcheckTechData } from "@/lib/dataSources/symcheckData";
+import React from "react";
 
 export default function Apps() {
     return(
