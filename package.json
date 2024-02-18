@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource-variable/oxanium": "^5.0.18",
+    "@fontsource/oxanium": "^5.0.18",
     "@mantine/core": "^7.0.0",
     "@mantine/form": "^7.0.0",
     "@mantine/hooks": "^7.0.0",

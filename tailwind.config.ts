@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--josef)"],
         mono: ["var(--inconsolata)"],
+        oxanium: ["Oxanium", "sans-serif"],
       },
     },
   },

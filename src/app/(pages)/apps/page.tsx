@@ -1,6 +1,7 @@
-import { symcheckDescription, moibrellaDescription } from "@/components/display/appDescriptions";
+import { symcheckDescription, moibrellaDescription, clifastDescription } from "@/components/display/appDescriptions";
 import AppsDisplay from "@/components/display/appsDisplay";
 import { SectionHeadingText } from "@/components/display/textsDisplays";
+import { clifastTechData } from "@/lib/dataSources/clifastData";
 import { moibrellaTechData } from "@/lib/dataSources/moibrellaData";
 import { symcheckTechData } from "@/lib/dataSources/symcheckData";
 import React from "react";
@@ -35,13 +36,13 @@ export default function Apps() {
                 <AppsDisplay
                     appName="Clifast"
                     demoLink="https://clifast.com"
-                    gitLink=""
-                    description={moibrellaDescription}
-                    modalTitle="Moibrella"
-                    techData={moibrellaTechData}
+                    gitLink={`${process.env.NEXT_PUBLIC_BASE_URL}/private-code`}
+                    description={clifastDescription}
+                    modalTitle="Clifast"
+                    techData={clifastTechData}
                 />
 
-
+                
 
             </div>
 

@@ -44,11 +44,11 @@ export default function ContactForm() {
             message: data.message,
             subject: data.subject
         }, `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+            .then(() => {
+               
                 form.reset()
-            }, (err) => {
-                console.log('FAILED...', err);
+            }, () => {
+               
             });
     }
 
@@ -64,7 +64,7 @@ export default function ContactForm() {
             <div className='mx-4'>
                 <form noValidate onSubmit={
                     form.onSubmit((values) => {
-                        // console.log('this is values', values.email)
+                      
                         onSubmit(values)
                     })}
                     className='flex flex-col'

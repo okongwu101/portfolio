@@ -18,49 +18,49 @@ export default function Education() {
     const [transcriptContent, setTranscriptContent] = useState<string[]>([])
     const [transcriptTitle, setTranscriptTitle] = useState("")
 
-    return(
-        <div className="lg:container mx-auto lg:px-52">
+    return (
+        <div className="lg:container mx-4 lg:px-52">
             <SectionHeadingText text="Education" />
             <div className="grid md:grid-cols-4 gap-x-8 gap-y-8 my-16">
                 {
                     educationData.map((e: educationDataType, index) => (
                         <div key={index} className="col-span-2">
                             <Card className={`rounded-md shadow-2xl drop-shadow-2xl  bg-gradient-to-r from-gray-100 to-blue-100`}>
-                                <div className="flex flex-col gap-y-16">
-                                    <div className="grid grid-cols-12 items-center">
-                                        <div className="font-sans text-lg md:text-xl font-semibold col-span-8">
-                                            {e.qualification}
-                                        </div>
-                                        <div className="font-mono cols-span-4 text-xs font-medium">
-                                            {e.acronym}
-                                        </div>
+                                {/* <div className="flex flex-col gap-y-16"> */}
+                                <div className="grid grid-cols-6 items-center gap-y-12">
+
+                                    <div className="col-span-5 font-sans text-lg md:text-xl font-semibold">
+                                        {e.qualification}
                                     </div>
 
-                                    <div className="grid grid-cols-12 items-center">
-                                        <div className="font-sans col-span-8 text-base md:text-lg font-medium">
-                                            {e.school}
-                                        </div>
-                                        <div className="font-mono col-span-4 text-xs font-medium">
-                                            {e.year}
-                                        </div>
+                                    <div className="col-span-1 font-mono text-xs font-medium">
+                                        {e.acronym}
                                     </div>
 
+                                    <div className="col-span-5 font-sans text-base md:text-lg font-medium">
+                                        {e.school}
+                                    </div>
 
-                                    <Button
-                                        className="bg-zinc-800 font-sans text-base tracking-wider rounded-md"
-                                        onClick={() => {
-                                            setTranscriptContent(e.transcript)
-                                            setTranscriptTitle(e.transcriptTitle)
-                                            open()
-                                        }}
-                                    >
-                                        Transcript
-                                    </Button>
+                                    <div className="col-span-1 font-mono text-xs font-medium">
+                                        {e.year}
+                                    </div>
 
-
+                                    <div className="col-span-6">
+                                        <Button
+                                            className="bg-zinc-800 font-sans text-base tracking-wider rounded-md w-full"
+                                            onClick={() => {
+                                                setTranscriptContent(e.transcript)
+                                                setTranscriptTitle(e.transcriptTitle)
+                                                open()
+                                            }}
+                                        >
+                                            Transcript
+                                        </Button>
+                                    </div>
 
                                 </div>
 
+                       
 
 
                             </Card>

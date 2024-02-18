@@ -5,7 +5,7 @@ import Providers from "@/lib/providers";
 import TopNav from "@/components/nav/topnav";
 import GoUp from "@/components/display/goUp";
 import Footer from "@/components/nav/footer";
-import "@fontsource-variable/oxanium";
+import '@fontsource/oxanium';
 import React from "react";
 
 

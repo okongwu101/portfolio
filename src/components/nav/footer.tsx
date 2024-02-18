@@ -27,7 +27,7 @@ export default function Footer() {
 
 
     return (
-        <div className="flex items-center justify-center bg-orange-200 h-64">
+        <div className="flex items-center justify-center bg-orange-200 h-64 mt-12">
 
             <div className='flex flex-col gap-8 items-center justify-center'>
                 <div className='flex flex-col md:flex-row gap-4'>

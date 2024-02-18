@@ -30,7 +30,17 @@ export const mastersTranscript = [
   "MSc Health Informatics Project.",
 ];
 
-export const fellowshipTranscript = [];
+export const fellowshipTranscript = [
+  "Epidemiology and disease control",
+  "Reproductive health",
+  "Environmental health",
+  "Occupational health and safety",
+  "Rehabilitative and social medicine",
+  "Health service management",
+  "Health promotion and community mobilization",
+  "Nutrition in public health",
+  "International health and disaster management",
+];
 
 export const bachelorTranscript = [
   "Anatomy",
