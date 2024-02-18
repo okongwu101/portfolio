@@ -15,7 +15,7 @@ export default function AboutMe() {
 
 
     return(
-        <div className="lg:container mx-auto lg:px-52">
+        <div className="lg:container mx-4 lg:px-52">
 
             <SectionHeadingText text="About Me" />
 

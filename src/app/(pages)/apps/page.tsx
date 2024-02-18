@@ -8,7 +8,7 @@ import React from "react";
 
 export default function Apps() {
     return(
-        <div className="lg:container mx-auto lg:px-52">
+        <div className="lg:container mx-4 lg:px-52">
             <SectionHeadingText text="Apps" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -20,13 +20,16 @@ export default function TopNav() {
         <div className={`relative mb-40 z-50`}>
             <div className={`flex flex-row justify-between h-20 md:h-24 lg:h-32 lg:pl-16 px-8 lg:pr-12 m-w-screen items-center fixed top-0 left-0 right-0  ${styles.background}`}>
 
-                <Image
-                    src={avatar2}
-                    alt="my Avatar"
-                    className="w-14 md:w-20 lg:28 h-auto ring-2 ring-offset-4 rounded-md"
-                    quality={100}
-                    priority={true}
-                />
+                <Link href="/">
+                    <Image
+                        src={avatar2}
+                        alt="my Avatar"
+                        className="w-14 md:w-20 lg:28 h-auto ring-2 ring-offset-4 rounded-md"
+                        quality={100}
+                        priority={true}
+                    />
+                </Link>
+
 
                 <div className="flex-row justify-evenly gap-12 items-center hidden lg:flex ">
 
@@ -46,7 +49,7 @@ export default function TopNav() {
                         >
                             Contact Me
                         </Button>
-                      
+
                     </Link>
                 </div>
 
@@ -62,7 +65,7 @@ export default function TopNav() {
                     onClose={toggle}
                     onClick={toggle}
                     withCloseButton={false}
-                    classNames={{ 
+                    classNames={{
                         body: "min-h-screen",
                         // root: "bg-orange-800",
                         // inner: "bg-pink-900"

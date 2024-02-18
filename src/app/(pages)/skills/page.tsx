@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Skills() {
     return(
-        <div className="lg:container mx-auto lg:px-52">
+        <div className="lg:container mx-4 lg:px-52">
             <SectionHeadingText text="Skills" />
             <div>
                 <LargeCardNoHover>
