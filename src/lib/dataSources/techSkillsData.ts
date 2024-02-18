@@ -1,7 +1,3 @@
-
-
-
-
 // define the type definition object for the data structure above
 
 export type TechSkillDataTypes = {
@@ -11,11 +7,6 @@ export type TechSkillDataTypes = {
     link: string;
   }[];
 };
-
-
-
-
-
 
 export const skillsData = [
   {
@@ -29,10 +20,6 @@ export const skillsData = [
         name: "Typescript",
         link: "https://www.typescriptlang.org/",
       },
-      {
-        name: "Python",
-        link: "https://www.python.org/",
-      },
     ],
   },
   {
@@ -43,7 +30,6 @@ export const skillsData = [
         link: "https://react.dev/",
       },
       { name: "NextJS", link: "https://nextjs.org/" },
-      { name: "Django", link: "https://www.djangoproject.com/" },
     ],
   },
   {
@@ -103,6 +89,15 @@ export const skillsData = [
   },
   {
     skillClass: "Form management",
-    values: [{ name: "React Hook Form", link: "https://react-hook-form.com/" }],
+    values: [
+      {
+        name: "React Hook Form",
+        link: "https://react-hook-form.com/",
+      },
+      {
+        name: "Mantine Form",
+        link: "https://mantine.dev/form/use-form/",
+      },
+    ],
   },
 ];
