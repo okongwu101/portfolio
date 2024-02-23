@@ -16,8 +16,9 @@ const greeting = "Hi, I'm"
 
 
 export default function LandingPage() {
-  
+
     return (
+      
         <div>
             <div className="grid md:grid-cols-2 gap-8">
                 <div className="flex flex-col gap-24 items-center justify-center">
@@ -81,23 +82,24 @@ export default function LandingPage() {
 
 
 
-                <div className="hidden md:flex items-center justify-center">
+                <div className="hidden md:flex items-start justify-center h-screen">
 
-                    <div className="flex items-center justify-center bg-red-200 w-100 rounded-md shadow-lg bg-gradient-to-r from-indigo-200">
+                    <div className="flex items-start justify-center  w-11/12 h-full rounded-3xl shadow-lg bg-gradient-to-r from-indigo-50 bg-red-50">
                         <Image
                             src={avatar1}
                             alt="big avatar"
-                            className="w-2/3 h-auto"
+                            className="h-full w-auto"
                             priority
+                            
                             quality={100}
                         />
                     </div>
-
+                   
 
                 </div>
             </div>
-           
+
         </div>
-        
+
     )
 }
